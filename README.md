@@ -1,0 +1,1 @@
+# AEM Wordpress Component Sample
