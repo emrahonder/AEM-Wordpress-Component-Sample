@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Properties"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+
+                    <targetURL
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                            fieldLabel="Wordpress URL"
+                            class="cq-dialog-dropdown-showhide"
+                            cq-dialog-dropdown-showhide-target=".text-image-hide-show"
+                            name="./targetURL">
+
+                    </targetURL>
+                    <selectType
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldLabel="Type"
+                            class="cq-dialog-dropdown-showhide"
+                            cq-dialog-dropdown-showhide-target=".text-image-hide-show"
+                            name="./selectType">
+                        <items jcr:primaryType="nt:unstructured">
+                            <posts jcr:primaryType="nt:unstructured"
+                                   text="Latest Posts"
+                                   value="posts"/>
+                            <pages jcr:primaryType="nt:unstructured"
+                                      text="Pages"
+                                      value="pages"/>
+
+                        </items>
+                    </selectType>
+                    <itemCount
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                            fieldLabel="How many items will be displayed?"
+                            class="cq-dialog-dropdown-showhide"
+                            min="1"
+                            max="25"
+                            name="./itemCount">
+
+                    </itemCount>
+
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>
+

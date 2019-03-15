@@ -1,0 +1,19 @@
+<sly data-sly-use.wordpress="com.nioya.core.models.WordpressModel">
+    <sly data-sly-test="${wordpress.targetURL == ''}">
+        <p>Please configure targetURL</p>
+    </sly>
+    <sly data-sly-test="${!wordpress.siteChecker}">
+        <p>Target Web Site is not available! Please check it firstly</p>
+    </sly>
+    <div  data-sly-repeat.entry="${wordpress.dataBack}">
+        <div><h1>${entry.title   @ context='html'}</h1></div>
+        <div>Date: ${entry.date} ${'dd.MM.yyyy ' @ format=entry.date}</div>
+        <div>${entry.excerpt  @ context='html'}</div>
+        <div><a href="${entry.link  @ extension = 'html'}">Continue</a></div>
+        <hr/>
+    </div>
+
+
+</sly>
+
+
